@@ -1,0 +1,255 @@
+/*Header======================================================================================*/
+#Room_Content{
+    width: 100%;
+}
+
+#Room_Content header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#Room_Content header .buttons-container{
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+}
+
+#Room_Content header .buttons-container .white-button{
+    width: 13.4rem;
+}
+
+#Room_Content header .buttons-container .blue-button{
+    width: 17.3rem;
+}
+
+#Room_Content header .buttons-container .white-button img,
+#Room_Content header .buttons-container .blue-button img{
+    width: 2rem;
+    height: 2rem;
+}
+
+/*Question Form===============================================================================*/
+#Room_Content main{
+    width: 80%;
+    margin: 0 auto;
+}
+#Room_Content main #Question_Form{
+    width: 100%;
+    margin-bottom: 1.6rem;
+}
+
+#Room_Content main #Question_Form form{
+    width: 100%;
+    padding: 1.6rem;
+    border-radius: 0 0.8rem 0.8rem 0.8rem;
+    border: 2px solid #A1B2CD;
+}
+
+#Room_Content main #Question_Form form textarea{
+    width: 100%;
+    text-decoration: none;
+    border: none;
+    background: transparent;
+    resize: none;
+}
+
+#Room_Content main #Question_Form form textarea:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+#Room_Content main #Question_Form form textarea::placeholder{
+    color: var(--gray-blue);
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+}
+
+#Room_Content main #Question_Form form footer{
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#Room_Content main #Question_Form form footer div{
+    color: var(--icons-and-details-color);
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+#Room_Content main #Question_Form form footer button.blue-button{
+    padding: 0 2.6rem;
+    height: 4rem;
+}
+
+/*Questions===================================================================================*/
+#Room_Content main #Questions{
+    width: 100%;
+}
+
+#Room_Content main #Questions .question-card{
+    width: 100%;
+    min-height: 13.6rem;
+    margin-bottom: 0.8rem;
+    padding: 2.4rem;
+    border-radius: 0 0.8rem 0.8rem 0.8rem;
+    background: var(--light-blue);
+}
+
+#Room_Content main #Questions .question-card.read{
+    width: 100%;
+    min-height: 13.6rem;
+    margin-bottom: 0.8rem;
+    padding: 2.4rem;
+    border-radius: 0 0.8rem 0.8rem 0.8rem;
+    background: var(--light-gray);
+}
+
+#Room_Content main #Questions .question-card .question-content{
+    display: flex;
+    height: 65%;
+    gap: 1.6rem;
+    margin-bottom: 1.2rem;
+}
+
+#Room_Content main #Questions .question-card .question-content .user{
+    width: 5.2rem;
+    height: 5.2rem;
+    display: flex;
+    padding: 1.4rem;
+    clip-path: circle();
+    justify-content: center;
+    align-items: center;
+
+    background: var(--buttuns-blue);
+}
+
+#Room_Content main #Questions .question-card.read .question-content .user{
+    width: 5.2rem;
+    height: 5.2rem;
+    display: flex;
+    padding: 1.4rem;
+    clip-path: circle();
+    justify-content: center;
+    align-items: center;
+
+    background: var(--gray-blue);
+}
+
+#Room_Content main #Questions .question-card .question-content .question{
+    padding-top: 1.5rem;
+}
+
+#Room_Content main #Questions .question-card .question-content .question p{
+    width: 100%;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+#Room_Content main #Questions .question-card .actions-container{
+    width: 100%;
+    display: flex;
+    gap: 2.4rem;
+    justify-content: right;
+}
+
+#Room_Content main #Questions .question-card .actions-container a{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--normal-gray);
+}
+
+/*Modal=======================================================================================*/
+.modal-wrapper{
+    display: none;
+}
+
+.modal-wrapper.actived{
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: var(--overlay);
+}
+
+.modal-wrapper.actived .modal{
+    width: min(59rem,90%);
+    padding-block: 6.4rem;
+    text-align: center;
+    border-radius: 0.8rem;
+    background: var(--general-background-color);
+}
+
+.modal-wrapper.actived .modal h2{
+    margin-bottom: 1.2rem;
+}
+
+.modal-wrapper.actived .modal p{
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color: var(--normal-gray);
+    margin-bottom: 2.4rem;
+}
+
+.modal-wrapper.actived .modal form{
+    width: 48.8%;
+    margin: 0 auto;
+}
+
+.modal-wrapper.actived .modal form input{
+    width: 100%;
+    margin-bottom: 4rem;
+    padding: 1.3rem 1.2rem;
+    color: #0D114F;
+    outline: none;
+    border: 2px solid var(--buttuns-blue);
+}
+
+.modal-wrapper.actived .modal form .form-actions-container{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    gap: 0.8rem;
+}
+
+.modal-wrapper.actived .modal form .form-actions-container .gray-button,
+.modal-wrapper.actived .modal form .form-actions-container .red-button,
+.modal-wrapper.actived .modal form .form-actions-container .blue-button{
+    width: 50%;
+}
+
+/*No Questions================================================================================*/
+.no-questions{
+    margin-top: 5.2rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.no-questions #No_Questions_Title{
+    color: var(--h2-colour);
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.no-questions #No_Questions_Paragraph{
+    margin-top: 1.3rem;
+    font-family: 'Open sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    color: var(--normal-gray);
+}
